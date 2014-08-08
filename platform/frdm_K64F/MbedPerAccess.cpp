@@ -82,10 +82,10 @@ uint MbedPerAccess::analogOut(uint pinNo, uint val)
         return ERR_INVALID_ARG;
     }
     /* Only one analog out */
-    if (pinNo != 18) {
+    if (pinNo != 0) {
         return ERR_INVALID_PIN;
     }
-    aout = val;
+    aout = val/100.0;
     return ERR_SUCCESS;
 }
 
